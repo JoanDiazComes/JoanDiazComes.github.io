@@ -14,3 +14,10 @@ Aqui almacenaremos todo sobre los datos del trading de las mayores ganancias.
 
 - Para ***BOLD ITALIC*** tres asteriscos. 
 - Guion espacio sirve para hacer una lista.
+
+## Ejemplos de lista de tareas (tasks)
+
+- [] Aprender HTML
+- [] Aprender CSS
+- [] Aprender Javascript
+- [x] Aprender MySQL
