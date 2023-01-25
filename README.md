@@ -6,10 +6,11 @@ Vamos a descubrir el mercado del trading.
 
 Aqui almacenaremos todo sobre los datos del trading de las mayores ganancias.
 
-Dos **asteriscos** significa BOLD.
+- Dos **asteriscos** significa BOLD.
 
-Un *asterisco* significa ITALIC. 
+- Un *asterisco* significa ITALIC. 
 
-Un _guion bajo_ significa tambien ITALIC. 
+- Un _guion bajo_ significa tambien ITALIC. 
 
-Para ***BOLD ITALIC*** tres asteriscos. 
+- Para ***BOLD ITALIC*** tres asteriscos. 
+- Guion espacio sirve para hacer una lista.
