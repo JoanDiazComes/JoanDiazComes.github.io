@@ -17,7 +17,7 @@ Aqui almacenaremos todo sobre los datos del trading de las mayores ganancias.
 
 ## Ejemplos de lista de tareas (tasks)
 
-- [] Aprender HTML
-- [] Aprender CSS
-- [] Aprender Javascript
+- [ ] Aprender HTML
+- [ ] Aprender CSS
+- [ ] Aprender Javascript
 - [x] Aprender MySQL
