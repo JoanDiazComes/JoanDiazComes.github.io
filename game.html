@@ -25,6 +25,13 @@ function game (data)
 	document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current_room].name+". ¿Qué quieres hacer?</p>";
 }
 
+function parseCommand (command) {
+	
+}
+
+function parseInstruction (instruction) {
+
+}
 
 function readAction ()
 {
@@ -32,6 +39,18 @@ function readAction ()
 
 	let data = command.split(" ");
 	console.log(data);
+
+	if (data.lenght == 0) {
+	document.getElementById("terminal").innerHTML += "<p><strong>Error</strong>:escribe una instrucción</p>";
+	}
+
+	if (data.lenght == 1) {
+	parseCommand(data[0]);
+	}	
+	else{
+	parseInstruction(data);
+	}
+
 }
 
 fetch("https://JoanDiazComes.github.io/game.json").then(response => response.json()).then(data => game(data));
