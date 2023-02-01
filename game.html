@@ -32,6 +32,19 @@ function parseCommand (command) {
 		terminal_out("<p>"+game_data.rooms[current_room].description+"</p>");
 
 		break;
+
+	case "ir":
+		let doors = "";
+		let doors_num = game_data.rooms[current_room].doors.length;
+
+		for (let i = 0; i < doors_num; i++) {
+			doors += game_data.rooms[current_room].doors[i]+", ";
+		}
+
+		terminal_out("<p>Puedes ir a: "+doors+"</p>");
+
+
+
 	default:
 		terminal_out("<p><strong>Error</strong>: "+command+" commando no encontrado</p>");
 	}
@@ -49,11 +62,11 @@ function readAction ()
 	let data = instruction_trim.split(" ");
 	
 
-	if (data.lenght == 0 || instruction_trim == "") {
+	if (data.length == 0 || instruction_trim == "") {
 		document.getElementById("terminal").innerHTML += "<p><strong>Error</strong>:escribe una instrucción</p>";
 	}
 
-	if (data.lenght == 1) {
+	if (data.length == 1) {
 		parseCommand(data[0]);
 	}	
 	else{
