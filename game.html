@@ -26,18 +26,18 @@ function game (data)
 }
 
 function parseCommand (command) {
-	
+	console.log("El comando ", command);
 }
 
 function parseInstruction (instruction) {
-
+	console.log("La instrucción ", instruction);
 }
 
 function readAction ()
 {
 	let command = document.getElementById("commands").value;
 
-	let data = command.split(" ");
+	let data = instruction.trim().split(" ");
 	console.log(data);
 
 	if (data.lenght == 0) {
