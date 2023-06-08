@@ -5,8 +5,8 @@ let command = [];
 
 function terminalOut (info) {
 	let terminal = document.getElementById("game");
-	terminal.innerHTML += info;
-	terminal.scrollTop = terminal.scrollHeight;
+	terminalOut.innerHTML += info;
+	terminalOut.scrollTop == terminalOut.scrollHeight;
 }
 function findDoorNumber (door) {
 	let doors_num = game_data.doors.length;
@@ -35,21 +35,6 @@ function findItemNumber (item) {
 		}
 	}
 	return -1;
-}
-function executeCommand () {
-	command = document.getElementById("commands").value.trim().split(" ");
-	document.getElementById("commands").value = "";
-	console.log(command);
-	if (command.length == 0 || command == "") {
-		terminalOut("<p><strong>ERROR!!!:</strong> Escribe lo que quieres hacer: </p>");
-		return;
-	}
-	if (command.length == 1) {
-		parseCommand(command[0]);
-	}
-	else {
-		parseInstruction(command);
-	}
 }
 function parseCommand (command) {
 	switch (command) {
@@ -91,6 +76,22 @@ function parseCommand (command) {
 	}
 }
 
+function executeCommand () {
+	command = document.getElementById("commands").value.trim().split(" ");
+	document.getElementById("commands").value = "";
+	console.log(command);
+	if (command.length == 0 || command == "") {
+		terminalOut("<p><strong>ERROR!!!:</strong> Escribe lo que quieres hacer: </p>");
+		return;
+	}
+	if (command.length == 1) {
+		parseCommand(command[0]);
+	}
+	else {
+		parseInstruction(command);
+	}
+}
+
 function parseInstruction (instruction) {
 	switch (instruction[0]) {
 		case 'ver':
@@ -128,7 +129,7 @@ function parseInstruction (instruction) {
 				if (item == instruction[1]) {
 					let item_num = game_data.rooms[current_room].items.indexOf(item);		
 					if (item_num < 0) {
-						console.log("No se pudo eliminar el item de la habitacion");
+						terminalOut("No se pudo eliminar el item de la habitacion");
 						return;
 					}				
 					item_num = findItemNumber(item);
