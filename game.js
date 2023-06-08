@@ -178,4 +178,4 @@ function game (data) {
 	terminalOut("<p><strong>¡Benvenido a ENTIerrame!</strong> Si quieres morir de miedo este sera tu juego.</p>");
 	terminalOut("<p>Estas en " + data.rooms[current_room].name + ". ¿Qué quieres hacer?</p>");
 }
-fetch("https://JoanDiazComes.github.io/game.json").then(response => response.json()).then(data => game(data));
+fetch("https://joandiazcomes.github.io/game.json").then(response => response.json()).then(data => game(data));
